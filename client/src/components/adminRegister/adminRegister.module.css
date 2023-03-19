@@ -1,0 +1,26 @@
+.adminRegisterPage{
+    background-color: black;
+    z-index: 3;
+    color: white;
+    display: flex;
+}
+.adminRegister{
+    width:50%;
+    min-height: 70%;
+    margin:  auto;
+
+}
+.adminRegister h2{
+    margin: 3rem auto;
+   
+}
+.error{
+    color: red;
+}
+
+ @media only screen and (max-width:600px) {
+
+    .adminRegister {
+      width: auto;
+    }
+ }

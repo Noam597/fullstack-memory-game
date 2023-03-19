@@ -1,0 +1,102 @@
+.games{
+    padding: 2rem 0 0 0;
+    background: linear-gradient(40deg,#c9a040,#f5f5dc,#10d7d7,#0000ff);
+    background-size: 400%  400%;
+     animation: wave 10s ease-in-out infinite;
+    margin: 0;
+}
+
+.games h1{
+    margin: 1rem;
+    font-size: 3rem;
+}
+.navBar{
+    position: relative;
+}
+
+
+.games a{
+    padding: 2rem 3rem;
+    margin: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+.navBar ul{
+    display: flex; 
+    list-style-type: none;
+    justify-content: center;
+}
+.difficultyBtn{
+    display: none;
+}
+
+@keyframes wave{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+   .games a{
+    flex-direction: column;
+    color: white;
+    
+   }
+   .navBar > ul{
+    padding: 0;
+    color: white;
+   position: absolute;
+   flex-direction: column;
+   top: 0;
+   left: 0;
+   transform: translateX(-150%);
+   transition: all .45s;
+   height: 100%;
+   background-color: rgba(0, 0,0, 1);
+   z-index: 999;
+   width: 100vw;
+   min-height: 100vh;
+   text-align: center;
+ 
+}
+.navBar.menu > ul{
+    transform: translateX(0);
+   
+}
+.navBar li{
+    padding: 2rem;
+}
+.navBar li a{
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+.navBar button{
+    font-size: 1.2em;
+    color: white;
+    background-color: black;
+    margin: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+}
+.navBar button:active{
+
+    color: black;
+    background-color: white;
+ 
+}
+
+.difficultyBtn{
+    display: block;
+}
+
+}

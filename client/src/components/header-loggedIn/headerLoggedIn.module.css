@@ -1,0 +1,99 @@
+.loggedIn{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.navBar ul{
+    display: flex; 
+    list-style-type: none;
+}
+
+.navBar li{
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.navBar li:last-child{
+    transition: all .45s;
+}
+.navBar li:hover:last-child{
+    background-color: black;
+    color: gold;
+    border-radius: 12px;
+}
+.navBar li::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: all .3s;
+}
+.navBar li:hover::after{
+   width: 100%;
+}
+.navBar a{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.menuButton{
+    display: none;
+}
+
+.title{
+
+    font-size: 2.25rem;
+    padding: 0 2rem;
+    transition: all.45s;
+}
+
+
+@media only screen and (max-width: 600px){
+
+
+    .loggedIn h1{
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
+    .navBar > ul{
+        padding: 0;
+        color: white;
+       position: fixed;
+       flex-direction: column;
+       top: 0;
+       left: 0;
+       transform: translateY(-150%);
+       transition: all .45s;
+       height: 100%;
+       background-color: rgba(0, 0,0, 0.7);
+       z-index: 999;
+       width: 100vw;
+       text-align: center;
+     
+   }
+   
+ 
+   
+   .navBar.menu > ul{
+       transform: translateY(0);
+      
+   }
+   .navBar li{
+    padding: 2rem;
+}
+    .menuButton{
+        display: block;
+        color: black;
+        border: none;
+        background-color: inherit;
+        padding: 1rem;
+        font-size: 2rem;
+        text-align: center; 
+    }
+    }

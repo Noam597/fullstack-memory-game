@@ -1,0 +1,189 @@
+GET http://localhost:3001 HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3001/test HTTP/1.1
+Content-Type: application/json
+
+###
+POST  http://localhost:3001/regex HTTP/1.1
+Content-Type: application/json
+
+    {
+        "post":"  "
+   
+    }
+###
+
+GET http://localhost:3001/admin HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3001/admin/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/admin/removeplayer/65 HTTP/1.1
+Content-Type: application/json
+
+
+###
+POST http://localhost:3001/admin/addcoins HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":1,
+    "coins":3
+}
+
+###
+
+
+POST http://localhost:3001/members/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "cap@mail.com" ,
+    "password":"12345678"
+}
+
+###
+POST http://localhost:3001/members/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"hulk",
+    "email": "hulk@gmail.com" ,
+    "password":"12345678" 
+}
+
+###
+
+GET http://localhost:3001/members/verify/8 HTTP/1.1
+Content-Type: application/json
+
+
+
+###
+
+POST http://localhost:3001/members/subscribe HTTP/1.1
+Content-Type: application/json
+
+    {
+        "name":"jamey 5",
+        "email": "jamey5@mail.com"
+    }
+
+###
+POST  http://localhost:3001/payment/pay/1 HTTP/1.1
+Content-Type: application/json
+
+    {
+        "purchase":5
+    }
+   
+###
+POST  http://localhost:3001/payment/paytoplay/1 HTTP/1.1
+Content-Type: application/json
+
+    {
+        "pay":1
+    }
+   
+###
+
+POST  http://localhost:3001/scores/bestscore HTTP/1.1
+Content-Type: application/json
+
+    {
+        "level":"best_time"
+    }
+   
+###
+GET  http://localhost:3001/scores HTTP/1.1
+Content-Type: application/json
+
+   
+###
+GET  http://localhost:3001/scores/5 HTTP/1.1
+Content-Type: application/json
+
+   
+###
+
+POST http://localhost:3001/token HTTP/1.1
+Content-Type: application/json
+
+    {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjc0NTQ1MzcxLCJleHAiOjE2NzQ1NDUzOTF9.iTeKwuE30TAQ-ZcVTLDQIjBn79NeZsqZByCmBufRPgo"
+    }
+
+###
+
+
+POST  http://localhost:3001/admin/banned/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+
+POST http://localhost:3001/admin/banned HTTP/1.1
+Content-Type: application/json
+
+    {
+        "email": "joker@mail.com"
+    }
+
+###
+
+POST http://localhost:3001/admin/addplayer HTTP/1.1
+Content-Type: application/json
+
+    {
+        "name":"Harley Quinn",
+        "email": "hq@mail.com" ,
+        "password":"1234" 
+    }
+
+###
+
+GET http://localhost:3001/prices HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/prices/updateprices HTTP/1.1
+Content-Type: application/json
+
+{
+    "easy":2,
+    "moderate":-1,
+    "hard":2,
+    "time_attack":2
+
+}
+###
+
+POST http://localhost:3001/changepassword HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"venom@mail.com"
+}
+###
+POST http://localhost:3001/changepassword/change HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"venom@mail.com",
+    "answer1":"space",
+    "answer2":"new york"
+}
+###
+POST http://localhost:3001/changepassword/changepassword HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"venom@mail.com",
+    "password1":"432",
+    "password2":"4321"
+}

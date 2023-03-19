@@ -1,0 +1,95 @@
+.profilePage{
+   background-color: black;
+}
+.profile{
+     width: 60%;
+     min-height: 100vh;
+    margin: auto;
+    background: linear-gradient(40deg,#c9a040,#f5f5dc,#10d7d7,#0000ff);
+    background-size: 400%  400%;
+     animation: wave 10s ease-in-out infinite;
+}
+.profile table,tr,th,td{
+    border: none;
+}
+.profile table{
+    width: 100%;
+    margin:auto;
+    border-collapse:collapse ;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.profile,th,td{
+    padding: 1rem;
+}
+.profile th{
+    background-color:rgba(55, 55, 228, 0.5);
+}
+.profile tr:nth-child(even){
+    background-color:rgba(84, 84, 189, .5);
+}
+.profile tr:nth-child(odd){
+    background-color: rgba(129, 129, 231.5);
+}
+.select{
+    /* appearance: none; */
+   font-size: 1.5rem;
+   border: none;
+   width: 300px;
+   padding: 1rem;
+   color:white;
+   background-color: black;
+   margin: .7rem;
+   border-radius: .25em;
+   cursor: pointer;
+}
+.select option{
+  
+   border: none;
+   width: 300px;
+   padding: 1rem;
+   color:white;
+   background-color: black;
+   border-radius:.25em;
+   
+   
+}
+.purchase{
+    width: 300px;
+    margin: auto;
+}
+
+@keyframes wave{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .profile{
+        width: 90%; 
+     
+    }
+    .profile,th,td{
+        padding: .5rem;
+    }
+  
+    .select{
+        width: auto;
+        margin: 0;
+    }
+  
+    .purchase{
+        width: 90%;
+        margin: auto;
+    }
+
+}

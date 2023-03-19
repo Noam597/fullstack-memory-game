@@ -1,0 +1,11 @@
+.header{
+    /* color: white; */
+    letter-spacing: 1rem;
+}
+
+@media only screen and (max-width: 438px){
+.header{
+    letter-spacing: .5rem;
+    font-size: .8rem;
+}
+}

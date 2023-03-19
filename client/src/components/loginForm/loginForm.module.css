@@ -1,0 +1,125 @@
+.loginForm{
+    
+    /* padding: 1rem; */
+    width: 30%;
+    background-color: black;
+     display: flex;
+    flex-direction: column;
+    z-index: 3;
+   
+}
+.loginForm a{
+    color: white;
+    text-decoration: none;
+    margin: 1rem auto;
+}
+.form{
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: linear-gradient(to bottom right,rgba(255,255,255,.5),rgba(255,255,255,.2));
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+
+    
+    
+}
+.form input{
+    color: white;
+    width: 80%;
+    padding: .5rem;
+    margin: 1rem;
+    overflow: hidden;
+    background: inherit;
+    border: none;
+    border-bottom: solid 1px lightblue ;
+    
+}
+.form button{
+    border: none;
+    border-radius: 12px;
+    color: black;
+    background-color:  lightblue;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 50%;
+    padding: .7rem;
+    
+}
+.form button:active{
+    color: lightblue;
+    background-color: black ;
+    
+}
+.form span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.form span:active{
+    color: limegreen;
+}
+   
+.signUp{
+    transform: rotateY(180deg);
+}
+
+.form .login,
+.form .register{
+    width: 100%;
+   min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+.form .register{
+    transition: 0.3s ease all;
+    transform: rotateY(180deg);
+}
+.form h3{
+    margin: 0;
+}
+.error{
+    margin: 0;
+    color: red;
+}
+.register select{
+    color: white;
+    width: 80%;
+    padding: .5rem;
+    margin: 1rem;
+    overflow: hidden;
+    background: inherit;
+    border: none;
+    border-bottom: solid 1px lightblue ;
+}
+.register option{
+    color: black;
+}
+.success{
+    color: #1ecf1e;
+    margin-top: 50%;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px){
+    .loginForm{
+        /* padding: 1rem; */
+       background: none;
+       
+       
+    }
+    .form{
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+    
+        top: 100px;
+        left: 0;
+        background: rgba(0,0,0,.5);
+    }
+}

@@ -1,0 +1,62 @@
+/* .paymentPage{
+    width: 60%;
+    background: linear-gradient(40deg,#c9a040,#f5f5dc,#10d7d7,#0000ff);
+    background-size: 400%  400%;
+     animation: wave 10s ease-in-out infinite;
+    margin: auto;
+} */
+
+
+@keyframes wave{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+
+.paypal{
+    width: 300px;
+    margin: auto;
+}
+.select{
+     /* appearance: none; */
+    font-size: 1.5rem;
+    border: none;
+    width: 300px;
+    padding: 1rem;
+    color:white;
+    background-color: black;
+    margin: .7rem;
+    border-radius: .25em;
+    cursor: pointer;
+}
+.select option{
+   
+    border: none;
+    width: 300px;
+    padding: 1rem;
+    color:white;
+    background-color: black;
+    border-radius:.25em;
+    
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+
+  
+    .select{
+        width: auto;
+        margin: 0;
+    }
+
+ 
+
+}

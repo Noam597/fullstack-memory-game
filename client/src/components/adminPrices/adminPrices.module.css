@@ -1,0 +1,64 @@
+.adminPricesPage{
+    background-color: black;
+    z-index: 3;
+    color: white;
+    display: flex;
+}
+.adminPrices{
+    width:50%;
+    min-height: 70%;
+    margin:  auto;
+
+}
+.adminPrices h2{
+    margin: 3rem auto;
+   
+}
+/* 
+.form{
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-height: 70%;
+    margin: 2rem auto;
+    background: linear-gradient(to bottom right,rgba(255,255,255,.5),rgba(255,255,255,.2));
+    position: relative;
+}
+.form label,.form input{   
+    margin: 1rem auto;
+    border-radius: 50px;
+}
+.form input{
+    font-size: 1.2rem;
+    color: white;
+    width: 80%;
+    padding: .5rem;
+    border: none;
+    border-bottom: solid 1px lightblue ;
+    border-radius: 50px;
+    background: inherit;
+}
+.form input:last-child{
+    border: none;
+    color: black;
+    background-color:  lightblue;
+    cursor: pointer;
+}
+.form input:last-child:active{
+    color: lightblue;
+    background-color: black ;
+    
+} */
+ @media only screen and (max-width:600px) {
+    .form{
+        margin: 0;
+        width: auto;
+    }
+    .form input{
+        width:90%;
+    }
+    .adminPrices {
+      width: auto;
+    }
+ }

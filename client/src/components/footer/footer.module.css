@@ -1,0 +1,43 @@
+.footer{
+    background-color: #222121;
+    color: white;
+    padding: 0 0 1.5rem 0 ;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.footer form{
+    margin: 0 ;
+
+}
+.footer h4{
+    margin: 1rem;
+}
+
+.footer input{
+    font-size: 1.2rem;
+    border: none;
+    padding: .5rem;
+   margin: .5rem;
+    width: auto;
+    border-radius: 12px;
+}
+.footer input:last-child{
+    border: none;
+    color: black;
+    background-color:  lightblue;
+    cursor: pointer;
+    
+}
+.footer input:last-child:active{
+    color: lightblue;
+    background-color: black ;
+    
+}
+@media only screen and (max-width: 600px){
+    .footer form{
+        margin: 0 ;
+        flex-direction: column;
+        width: 100%;
+    }
+}

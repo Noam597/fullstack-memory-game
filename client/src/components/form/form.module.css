@@ -1,0 +1,67 @@
+.form{
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-height: 70%;
+    margin: 2rem auto;
+    background: linear-gradient(to bottom right,rgba(255,255,255,.5),rgba(255,255,255,.2));
+    position: relative;
+}
+.form h2{
+    margin: 3rem auto;
+   
+}
+.form label,.form input,.form textarea{
+    
+    margin: 1rem auto;
+    
+    border-radius: 50px;
+}
+.form input,.form textarea{
+    font-size: 1.2rem;
+    color: white;
+    width: 80%;
+    padding: .7rem;
+    border: none;
+    border-bottom: solid 1px lightblue ;
+    border-radius: 50px;
+    background: inherit;
+}
+.form input:last-child{
+    border: none;
+    color: black;
+    background-color:  lightblue;
+    cursor: pointer;
+}
+.form input:last-child:active{
+    color: lightblue;
+    background-color: black ;
+    
+}
+.form a{
+    color: white;
+    text-decoration: none;
+    margin: 1rem auto;
+}
+.form a:hover{
+    color: gold;
+
+}
+.form .error{
+    color: red;
+}
+ @media only screen and (max-width:600px) {
+    .contactForm{
+        flex-direction: column;
+    }
+    .form{
+        margin: 0 2%;
+        width: auto;
+    }
+    .form input,.form textarea{
+
+        width:auto;
+    
+    }
+}
