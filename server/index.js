@@ -32,58 +32,17 @@ app.get("/", (req, res) => {
   console.log("done");
 });
 
-app.get("/test", testTable);
-app.post("/token", tokenAuthCheck, (req, res) => {
-  console.log("ok");
-});
 
-function sqlInjection(req,res,next){
-  const formValues = req.body; 
+app.use('/prices',priceRoutes);
 
-   let unclean = false
-
-  for (const [key,value] of Object.entries(formValues)) {
-
-      let sql_characters =/ ((\w|\d|\s)+)?[;='"]((\w|\d|\s)+)?/gi
-
-     if(sql_characters.test(value)){ 
-      unclean = true
-    //  return console.log('injection attempted',value)
-     } 
-
-     let sql_comment =/ ((\w|\d|\s)+)?--|#((\w|\d|\s)+)? /gi
-       if(sql_comment.test(value)){ 
-        unclean = true
-      // return console.log('injection attempted',value)
-     }
-
-      let sql_union = /((\w|\d)+)?(\s([\n]|'|")?)union([(\s)]+\w)([\n])?/gi
-     if(sql_union.test(value)){ 
-      unclean = true
-      // return console.log('injection attempted',value)
-      }
-
-      if(unclean == false){
-        next()
-      }else{
-       return res.status(403).json({
-          message:"SQL Injection Detected"
-        })
-      }
-}
-}
-app.post('/regex',sqlInjection,(req,res)=>{
-
-  console.log("its clean")
- 
-  
-  
-})
-app.use('/prices',priceRoutes)
 app.use("/admin", adminRouter);
+
 app.use("/members", signUpRouter);
+
 app.use("/payment", paymentRouter);
+
 app.use("/scores", scoresRoutes); 
+
 app.use("/changepassword",changPasswordRouter)
 app.listen(port, () => {
   console.log(`http://localhost:${port} is running`);
