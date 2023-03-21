@@ -7,14 +7,14 @@ module.exports ={
       
         for (const [key,value] of Object.entries(formValues)) {
       
-            let sql_characters =/ ((\w|\d|\s)+)?[;='"]((\w|\d|\s)+)?/gi
+            let sql_characters =/((\w|\d|\s)+)?[;='"]((\w|\d|\s)+)?/gi
       
            if(sql_characters.test(value)){ 
                  unclean = true
           //  return console.log('injection attempted',value)
            } 
       
-           let sql_comment =/ ((\w|\d|\s)+)?--|#((\w|\d|\s)+)? /gi
+           let sql_comment =/((\w|\d|\s)+)?--|#((\w|\d|\s)+)? /gi
              if(sql_comment.test(value)){ 
               unclean = true
             // return console.log('injection attempted',value)
