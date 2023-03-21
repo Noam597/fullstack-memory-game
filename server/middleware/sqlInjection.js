@@ -11,19 +11,16 @@ module.exports ={
       
            if(sql_characters.test(value)){ 
                  unclean = true
-          //  return console.log('injection attempted',value)
            } 
       
            let sql_comment =/((\w|\d|\s)+)?--|#((\w|\d|\s)+)? /gi
              if(sql_comment.test(value)){ 
               unclean = true
-            // return console.log('injection attempted',value)
            }
       
             let sql_union = /((\w|\d)+)?(\s([\n]|'|")?)union([(\s)]+\w)([\n])?/gi
            if(sql_union.test(value)){ 
             unclean = true
-            // return console.log('injection attempted',value)
             }
       
           
