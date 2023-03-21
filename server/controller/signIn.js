@@ -51,12 +51,9 @@ module.exports = {
                         console.log(verified)
                       }
                     })
-                  // db.query(`INSERT INTO banned_players(playerEmail,banned) VALUE('${email}',false)`,(banErr,banRes)=>{
-                  //  if(banErr) {console.log(banErr) }
-                  // }
-                  // ) 
-                  // let verificationEmail = {to:email,subject:"Verify Your Account",html:`<h1><a href="http://localhost:3001/members/verify/${id}">please click</a> to verify your account</h1> `}
-                  // sendeMail(verificationEmail)
+
+                   let verificationEmail = {to:email,subject:"Verify Your Account",html:`<h1><a href="http://localhost:3001/members/verify/${id}">please click</a> to verify your account</h1> `}
+                   sendeMail(verificationEmail)
                   res.json({
                     response: `welcome to the club ${name}`,
                   });
