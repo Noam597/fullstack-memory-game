@@ -2,6 +2,16 @@
 
 A fullstack memory game with user authentication, coin-based play, and PayPal payments. Built with React, Node.js, and MySQL.
 
+
+- 🔐 User authentication (JWT + bcrypt)
+- 📧 Email verification & security question reset
+- 🕹️ Difficulty-based memory game
+- 🪙 Coin system for game access
+- 💰 PayPal payment integration
+- 🛡️ Admin dashboard for managing users & pricing
+- 🔒 Custom backend security middleware
+
+
 ## Frontend
 
 Built with React a fully responsive modeule CSS app that includes a sign-up and login form with strong password security requirements.
