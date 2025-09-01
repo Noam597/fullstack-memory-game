@@ -1,4 +1,6 @@
-# fullstack-memory-game
+# 🎮 Fullstack Memory Game
+
+A fullstack memory game with user authentication, coin-based play, and PayPal payments. Built with React, Node.js, and MySQL.
 
 ## Frontend
 
